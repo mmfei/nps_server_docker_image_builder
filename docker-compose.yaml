@@ -5,4 +5,4 @@ services:
   network_mode: "host"
   restart: always
   volumes:
-    "./build/conf/nps.conf:/etc/nps/conf/nps.conf"
+    "./build/conf/:/etc/nps/conf/"

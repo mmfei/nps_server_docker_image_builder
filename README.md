@@ -41,7 +41,7 @@ http://<IP>:8080
 
 ## docker run
 ```
-docker run -d -v "./build/conf/nps.conf:/etc/nps/nps.conf" --network host --name nps_server mmfei/nps_server
+docker run -d -v "./build/conf/:/etc/nps/" --network host --name nps_server mmfei/nps_server
 ```
 
 ## docker compose
@@ -52,7 +52,7 @@ services:
   image: "mmfei/nps_server"
   networks: "host"
   volumes:
-    "./build/conf/nps.conf:/etc/nps/conf/nps.conf"
+    "./build/conf/:/etc/nps/conf/"
 ```
 
 ## reconfigure
