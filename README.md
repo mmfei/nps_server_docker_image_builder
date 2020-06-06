@@ -32,6 +32,7 @@ firewall-cmd --list-ports
 
 # allow ports
 firewall-cmd --permanent --add-port=8080/tcp # allow 8080 port
+firewall-cmd --permanent --add-port=8024/tcp # allow 8024 port
 firewall-cmd --permanent --add-port=10150-10179/tcp # allow ports : 10150~10179
 firewall-cmd --reload #
 ```
