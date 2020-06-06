@@ -16,7 +16,7 @@ see in docker hub:
 [document](https://ehang-io.github.io/nps/#/?id=nps)
 
 # what is in container
-```u
+```bash
 ## where is nps
 /usr/bin/nps
 
@@ -25,7 +25,7 @@ see in docker hub:
 ```
 
 ## attention
-```
+```bash
 # nps server is listening ports : 80 , 443 , 8024 , 8080
 # please check firewall , allow ports[80,443,8024,8080] (Please don't disable firewall!!!):
 firewall-cmd --list-ports
@@ -36,15 +36,17 @@ firewall-cmd --permanent --add-port=10150-10179/tcp # allow ports : 10150~10179
 firewall-cmd --reload #
 ```
 
-## admin dashboard
-```
+## admin dashboard (modify passwod , see build/conf/nps.conf)
+```bash
 # local test(or change your ip/domain):
 http://localhost:8080
+user: adminroot
+password: 123QWEIOP
 ```
 
 
 ## docker run
-```
+```bash
 # for linux (Using network = host)
 docker run -d  -v $PWD/build/conf/:/etc/nps/conf/ --network host --name nps_server mmfei/nps_server
 
@@ -53,7 +55,7 @@ docker run --rm  -v $PWD/build/conf/:/etc/nps/conf/ --name nps_server -p 8080:80
 ```
 
 ## docker compose
-```
+```docker
 version: "3"
 services: 
   name: "nps_server"
