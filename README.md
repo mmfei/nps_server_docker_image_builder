@@ -1,4 +1,4 @@
-# This is a docker deployment for **npa server** [ehang-io/nps](https://github.com/ehang-io/nps) (NPS is a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.)
+# This is a docker deployment for `nps server` [ehang-io/nps](https://github.com/ehang-io/nps) (NPS is a lightweight, high-performance, powerful intranet penetration proxy server, with a powerful web management terminal.)
 
 ![docker build](https://img.shields.io/docker/cloud/build/mmfei/nps_server.svg)
 ![docker automated](https://img.shields.io/docker/cloud/automated/mmfei/nps_server.svg)
