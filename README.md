@@ -1,7 +1,7 @@
 # This is a nps server
 
-![docker build](https://img.shields.io/docker/build/mmfei/nps_server.svg)
-![docker automated](https://img.shields.io/docker/automated/mmfei/nps_server.svg)
+![docker build](https://img.shields.io/docker/cloud/build/mmfei/nps_server.svg)
+![docker automated](https://img.shields.io/docker/cloud/automated/mmfei/nps_server.svg)
 ![language](https://img.shields.io/badge/language-dockerfile-3572A5.svg)
 ![docker image size](https://img.shields.io/docker/v/mmfei/nps_server/latest)
 ![docker hub](https://img.shields.io/docker/pulls/mmfei/nps_server.svg)
@@ -29,6 +29,7 @@ firewall-cmd --list-ports
 
 # allow ports
 firewall-cmd --permanent --add-port=8080/tcp # allow 8080 port
+firewall-cmd --permanent --add-port=10150-10179/tcp # allow ports : 10150~10179
 firewall-cmd --reload #
 ```
 
@@ -53,3 +54,6 @@ services:
   volumes:
     "./build/conf/nps.conf:/etc/nps/conf/nps.conf"
 ```
+
+## reconfigure
+[document](https://ehang-io.github.io/nps/#/?id=nps)
