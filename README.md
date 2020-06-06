@@ -11,14 +11,17 @@
 see in docker hub:  
 [mmfei/nps_server](https://hub.docker.com/r/mmfei/nps_server)
 
+
+## reconfigure
+[document](https://ehang-io.github.io/nps/#/?id=nps)
+
 # what is in container
 ```u
 ## where is nps
 /usr/bin/nps
-## config
+
+## config path
 /etc/nps/conf
-## how to start?
-nps start
 ```
 
 ## attention
@@ -35,13 +38,18 @@ firewall-cmd --reload #
 
 ## admin dashboard
 ```
-http://<IP>:8080
+# local test(or change your ip/domain):
+http://localhost:8080
 ```
 
 
 ## docker run
 ```
-docker run -d -v "./build/conf/:/etc/nps/" --network host --name nps_server mmfei/nps_server
+# for linux (Using network = host)
+docker run -d  -v $PWD/build/conf/:/etc/nps/conf/ --network host --name nps_server mmfei/nps_server
+
+# for mac or windows (--network host : Linux Only)
+docker run --rm  -v $PWD/build/conf/:/etc/nps/conf/ --name nps_server -p 8080:8080 -p 8024:8024 mmfei/nps_server /usr/bin/nps
 ```
 
 ## docker compose
@@ -51,9 +59,8 @@ services:
   name: "nps_server"
   image: "mmfei/nps_server"
   networks: "host"
+  ports:
+    - "8080:8080"
   volumes:
     "./build/conf/:/etc/nps/conf/"
 ```
-
-## reconfigure
-[document](https://ehang-io.github.io/nps/#/?id=nps)
