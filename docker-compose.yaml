@@ -1,10 +1,11 @@
 version: "3"
 services: 
-  container_name: "nps_server"
-  image: "mmfei/nps_server"
-  network_mode: "host"
-  restart: always
-  ports: 
-    - "8080:8080"
-  volumes:
-    "./build/conf/:/etc/nps/conf/"
+  nps_server:
+    image: mmfei/nps_server
+    container_name: "nps_server"
+    # network_mode: "host"
+    restart: always
+    ports: 
+      - "8080:8080"
+    volumes:
+      - "./build/conf/:/etc/nps/conf/"
