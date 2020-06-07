@@ -7,5 +7,6 @@ services:
     restart: always
     ports: 
       - "8080:8080"
+      - "8024:8024"
     volumes:
       - "./build/conf/:/etc/nps/conf/"
