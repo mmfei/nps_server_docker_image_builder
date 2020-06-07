@@ -1,4 +1,4 @@
-# nps client
+# nps client  | [nps server?](README.md)
 
 ## docker compose
 ### docker-compose.client.yml  (Only For Linux , because network mode host only for linux)

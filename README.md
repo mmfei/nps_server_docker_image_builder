@@ -3,7 +3,7 @@
 ![github last commit](https://img.shields.io/github/last-commit/mmfei/nps_server_docker_image_builder.svg)
 ![language](https://img.shields.io/badge/language-dockerfile-3572A5.svg)
 
-## mmfei/nps_server
+## docker hub : [mmfei/nps_server](https://hub.docker.com/r/mmfei/nps_server) [server document](https://ehang-io.github.io/nps/#/?id=nps)
 ![docker build](https://img.shields.io/docker/cloud/build/mmfei/nps_server.svg)
 ![docker automated](https://img.shields.io/docker/cloud/automated/mmfei/nps_server.svg)
 ![docker image size](https://img.shields.io/docker/v/mmfei/nps_server/latest)
@@ -12,19 +12,13 @@
 
 
 
-## mmfei/nps_client
+## docker hub : [mmfei/nps_client](https://hub.docker.com/r/mmfei/nps_server) [client document](https://ehang-io.github.io/nps/#/use) [README](README.client.html)
 ![docker build](https://img.shields.io/docker/cloud/build/mmfei/nps_client.svg)
 ![docker automated](https://img.shields.io/docker/cloud/automated/mmfei/nps_client.svg)
 ![docker image size](https://img.shields.io/docker/v/mmfei/nps_client/latest)
 ![docker hub](https://img.shields.io/docker/pulls/mmfei/nps_client.svg)
 ![docker image size](https://img.shields.io/docker/image-size/mmfei/nps_client/latest.svg)
 
-see in docker hub:  
-[mmfei/nps_server](https://hub.docker.com/r/mmfei/nps_server)
-
-
-## reconfigure
-[document](https://ehang-io.github.io/nps/#/?id=nps)
 
 # what is in container
 ```bash
