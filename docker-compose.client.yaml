@@ -1,0 +1,9 @@
+version: "3"
+services: 
+  nps_client:
+    image: mmfei/nps_client
+    container_name: "nps_client"
+    # network_mode: "host"
+    restart: always
+    volumes:
+      - "./build_client/conf/:/npc/conf/"
