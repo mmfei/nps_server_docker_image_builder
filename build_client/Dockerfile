@@ -5,5 +5,4 @@ RUN yum install -y wget;
 RUN mkdir -p /npc;cd /npc ; wget -c  ${NPS_SERVER_BIN_URL} ; tar xvzf linux_amd64_client.tar.gz; 
 WORKDIR /npc
 RUN yum clean all && rm -rf /var/cache/yum;
-# VOLUME [ "/npc/conf/npc.conf" ]
-CMD ["/npc/npc"]
+CMD ["/npc/npc","-config","/npc/conf/npc.conf"]
